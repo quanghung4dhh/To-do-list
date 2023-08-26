@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Ubuntu&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18pt;
+  border: none;
+  outline: none;
+  list-style-type: none;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  height: 500px;
+  width: 500px;
+}
+.head {
+  background: #fffffe;
+  color: #2d334a;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.theme {
+  cursor: pointer;
+}
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fef6e4;
+  color: #172c66;
+  height: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid black;
+}
+ul li i {
+  cursor: pointer;
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  visibility: hidden;
+  font-size: 10px;
+  position: absolute;
+  background-color: black;
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  top: 150%;
+  left: 50%;
+}
+.pin {
+  width: 40px;
+  margin-left: -20px;
+}
+.remove {
+  width: 60px;
+  margin-left: -30px;
+}
+.change {
+  width: 50px;
+  margin-left: -25px;
+}
+.tooltip::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+ul li i:hover .tooltip {
+  visibility: visible;
+}
+.main {
+  position: relative;
+  height: 450px;
+  background-color: #f9f4ef;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.add {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffd803;
+  color: #272343;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 400px;
+  background-color: #8c7851;
+  margin-left: -200px;
+  height: 170px;
+  margin-top: -85px;
+  padding: 20px;
+  background-color: #fec7d7;
+  border-radius: 15px;
+  visibility: hidden;
+}
+.input input {
+  width: 300px;
+  margin-bottom: 10px;
+  font-size: 16pt;
+  padding: 5px;
+  border-radius: 10px;
+}
+.input .submit, .changeBut {
+  float: right;
+}
+.changeBut {
+  visibility: hidden;
+}
+.input button {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: #ff8906;
+  color: #fffffe;
+}
+
+/* Dark theme */
+
+.headdark {
+  background-color: #0f0e17;
+  color: #fffffe;
+}
+.maindark {
+  background-color: #584E5F;
+}
+ul li.dark {
+  background-color: #8D4C5F;
+  color: #fffffe;
+}
+.adddark {
+  background-color: #ff8906;
+  color: #fffffe;
+}
